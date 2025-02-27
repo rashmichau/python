@@ -110,7 +110,6 @@ c=C()'''
         else:
             return False
 
-
 s1=student(98,92)
 s2=student(95,93)
 s3=s1+s2
@@ -142,35 +141,70 @@ else:
 # s1.clasm()
 # s1.
 
-
-# class A():
-#     def __init__(self):
-#         self.name = "ravi"
+'''class A():
+    def __init__(self):
+        self.name = "ravi"
 
 class B:
     def __init__(self):
         self.name = "kavi"
         
+    def print_name3(self):
+        print(self.name)
+    def setage(self,val):
+        self.age=val
 
-    # def print_name3(self):
-    #     print(self.name)
-    # def setage(self,val):
-    #     self.age=val
-
-    # def print_name(self):
-    #     super().__init__()
-    #     print(self.name)
+    def print_name(self):
+        super().__init__()
+        print(self.name)
 
     def print_name2(self):
 
         print(self.age)
 
 obj = B()
-
-
-
 obj.age=20
 obj.print_name2()
+# print(a)'''
 
-# print(a)
+#Program to overload multiplication operator to work on Employee objects:
+'''class Employ:
+    def __init__(self,name,sal):
+        self.name=name
+        self.sal=sal
+class Timesheet:
+    def __init__(self,name,days):
+        self.name=name
+        self.days=days
+    def __mul__(self,other):
+        return self.days*other.sal
+        
+
+e=Employ("shivay",1000)
+t=Timesheet("shivay",30)
+
+print(t*e)'''
+
+#method overriding
+'''class Employ:
+    def __init__(self):
+        super().__init__()
+        print("init in Employ")
+    
+    def creative(self):
+        print("Employ creativity is good")
+
+class student(Employ):
+    def __init__(self):
+       # super().__init__()
+        print("init in student")
+
+    def study(self):
+        print("Enhance skills")
+s=student()
+e=Employ()
+e.creative()'''
+
+
+
 
