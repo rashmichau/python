@@ -123,3 +123,54 @@ if s1>s2:
     print ("s1 is win")
 else:
     print("s2 is win")'''
+
+# class student:
+
+#     name="radhey"
+#     def marks(self):
+#         print("marks of student")
+    
+#     @classmethod
+#     def clasm(cls):
+#         print("it is a class method")
+    
+#     @staticmethod
+#     def stat():
+#         print("it is a static method")
+
+# s1=student()
+# s1.clasm()
+# s1.
+
+
+# class A():
+#     def __init__(self):
+#         self.name = "ravi"
+
+class B:
+    def __init__(self):
+        self.name = "kavi"
+        
+
+    # def print_name3(self):
+    #     print(self.name)
+    # def setage(self,val):
+    #     self.age=val
+
+    # def print_name(self):
+    #     super().__init__()
+    #     print(self.name)
+
+    def print_name2(self):
+
+        print(self.age)
+
+obj = B()
+
+
+
+obj.age=20
+obj.print_name2()
+
+# print(a)
+
