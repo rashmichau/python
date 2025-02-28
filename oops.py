@@ -205,6 +205,85 @@ s=student()
 e=Employ()
 e.creative()'''
 
+# Encapsulation in python
+'''class BankAccount:
+    def __init__(self,_acc_holder,balance):
+        self.acc_holder=_acc_holder
+        self._intrest_rate=0.5
+        self.__balance=balance
+
+    def deposit(self,amount):
+        if amount>0:
+            self.__balance += amount
+            print(f"{amount} submit after deposite amount :{self.__balance}")
+        else:
+            print("Amount not be positive num")
+
+    def withdraw(self,amount):
+        if 0<amount<=self.__balance:
+            self.__balance -= amount
+            print(f"{amount} amount afte withdrawl balance : {self.__balance}")
+        else:
+            print("not sufficient amount")
+
+    def get_balance(self):
+        print(self.__balance)
+
+    def set_balance(self,new_balance):
+        if new_balance>0:
+            self.__balance=new_balance
 
 
+b=BankAccount("radhey",1000)
+print(b.acc_holder)
+print(b._intrest_rate)
+print(b._BankAccount__balance)   #mangling
+#print(b.__balance)
+# b.deposit(500)
+# b.withdraw(400)
+# b.set_balance(2000) 
+# b.get_balance()'''
 
+# Abstraction in python
+'''from abc import ABC,abstractmethod
+
+class vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+
+    @abstractmethod
+    def stop(self):
+        pass
+    
+    def new(self):
+        print("it is two year old")
+
+class Car(vehicle):
+    def start(self):
+        print("car started")
+
+    def stop(self):
+        print("car stopped")
+
+car =Car()
+car.start()
+car.stop()
+car.new()  '''
+ 
+class Test:   
+   
+    def __init__(self):   
+        self.a=10   
+        self.b=20   
+  
+    def m1(self):   
+        self.c=30  
+        del self.a 
+  
+t=Test() 
+t1=Test()  
+t.m1()  
+t1.m1()
+print(t.__dict__)   
+print(t1.__dict__)

@@ -1,5 +1,5 @@
 #Write a Python program to create a Student class and Creates an object to it. Call the method talk() to display student details
-'''class student:
+class student:
     def __init__(self) :
         self.name="raam"
         self.standard="6th"
@@ -13,7 +13,7 @@ s.marks=300
 s.talk()
 
 #Program to demonistrate constructor will execute only once per object:
-class Test:
+'''class Test:
     def __init__(self):
         #self.c="radhey"
         print("constructor execute")
@@ -123,7 +123,7 @@ s=test()
 s1=test()
 s2=test()
 s3=test()
-s.cl_m()'''
+s.cl_m()
 
 #Passing members of one class to another class:
 class Employ:
@@ -142,7 +142,7 @@ class test:
 s=Employ(18,"krishna",10000)
 #test.modify(s)
 #t=test()
-test.modify(s)
+test.modify(s)'''
 
 
 
