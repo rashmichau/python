@@ -238,11 +238,11 @@ b=BankAccount("radhey",1000)
 print(b.acc_holder)
 print(b._intrest_rate)
 print(b._BankAccount__balance)   #mangling
-#print(b.__balance)
-# b.deposit(500)
-# b.withdraw(400)
-# b.set_balance(2000) 
-# b.get_balance()'''
+# print(b.__balance)
+b.deposit(500)
+b.withdraw(400)
+b.set_balance(2000) 
+b.get_balance()'''
 
 # Abstraction in python
 '''from abc import ABC,abstractmethod
@@ -271,7 +271,7 @@ car.start()
 car.stop()
 car.new()  '''
  
-class Test:   
+'''class Test:   
    
     def __init__(self):   
         self.a=10   
@@ -286,4 +286,95 @@ t1=Test()
 t.m1()  
 t1.m1()
 print(t.__dict__)   
-print(t1.__dict__)
+print(t1.__dict__)'''
+
+#inheritance 
+'''class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    def display_info(self):
+        print(f"Name: {self.name}, Salary: {self.salary}")
+
+class Manager(Employee):
+    # def __init__(self, name, salary, department):
+    #      super().__init__(name, salary)  # Calls Employee's constructor
+    #      self.department = department
+
+    def display_info(self):  # Overriding method
+        super().display_info()  # Calls Employee's method
+        #print(f"Department: {self.department}")
+
+manager = Manager("Alice", 70000)
+manager.display_info()'''
+
+#operator overloading
+'''class student:
+    def __init__(self,marks):
+        
+        self.marks=marks
+    
+    def describe(self):
+        print("student name:",self.marks)
+
+    def __add__(self,other):
+        s3=self.marks + other.marks
+        return s3
+
+s1=student(89)
+s2=student(92)
+s1.describe()
+s3=s1+s2
+print(s3)
+
+#operator overloading
+class student:
+    
+    def marks(self,m1,m2):
+        print("marks",m1,m2)
+
+    def marks(self,m1,m2,m3):
+        print("marks",m1, m2, m3)
+
+
+ #method overriding      
+s=student()
+s.marks(34,35,36)
+
+class Employ:
+    def __init__(self):
+
+        print("init in Employ")
+    
+    def creative(self):
+        print("Employ creativity is good")
+
+class student(Employ):
+    def __init__(self):
+       # super().__init__()
+        print("init in student")
+
+    def study(self):
+        print("Enhance skills")
+s=student()
+e=Employ()
+e.creative()'''
+
+from abc import ABC ,abstractmethod
+
+class vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+    def stop(self):
+        print("stop the vehicle")
+class car(vehicle):
+    def start(self):
+        print("car started")
+c=car()
+c.start()
+
+
+
+    
