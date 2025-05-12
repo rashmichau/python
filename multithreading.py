@@ -1,5 +1,5 @@
 #current thread
-# import threading
+import threading
 # print("current thread is :",threading.current_thread().getName())
 
 #thread without using class
@@ -9,18 +9,17 @@ import time
 #     for i in range(1,11):
 #         print("child thread")
 #         time.sleep(1)
-#t=Thread(target=desplay)
-#t.start()
+# t=Thread(target=desplay)
+# t.start()
 # for i in range(1,11):
 #     print("compleated")
 #     time.sleep(2) 
 
-# with multithreading
+#with multithreading
 # def square(numbers):
 #     for n in numbers:
 #         print("square",n*n)
-#         time.sleep(1)
-
+        
 # def cube(numbers):
 #     for n in numbers:
 #         print("cube",n*n*n)
@@ -35,7 +34,6 @@ import time
 # print(l)
 # t1.join()
 # t2.join() 
-
 # print("completed")
 # print("The total time taken:",time.time()-begintime)  
 # print(t1.ident) 
@@ -49,7 +47,7 @@ import time
 #     l.acquire()
 #     for i in range(1,5):
 #         print("Good evening",end="")
-#         time.sleep(2)
+#         #time.sleep(2)
 #         print(name)
 #     l.release()
 
@@ -60,7 +58,7 @@ import time
 # t2.start()
 # t3.start()
 
-#Synchronization with the use of RLock
+# #Synchronization with the use of RLock
 # l=RLock()
 # def factorial(n):
 #     l.acquire()
@@ -75,20 +73,47 @@ import time
 # t1=Thread(target=results,args=(5,))
 # t2=Thread(target=results,args=(9,))
 # t1.start()
+# t1.join()
+
 # t2.start()
+# t2.join()
 
 #synchronization by use of Semaphore
-s=Semaphore(3)
-def wish(name):
-    s.acquire()
-    for i in range(1,11):
-        print("good evening :",name)
-        time.sleep(1)
-        #print(name)
-    s.release()
-t1=Thread(target=wish,args=("raam",))
-t2=Thread(target=wish,args=("radhey",))
-t3=Thread(target=wish,args=("krishna",))
-t1.start()
-t2.start()
-t3.start()
+# s=Semaphore(2)
+# def wish(name):
+#     s.acquire()
+#     for i in range(1,11):
+#         print("good evening :",name)
+#         time.sleep(1)
+#         #print(name)
+#     s.release()
+# t1=Thread(target=wish,args=("raam",))
+# t2=Thread(target=wish,args=("radhey",))
+# t3=Thread(target=wish,args=("krishna",))
+# t1.start()
+# t2.start()
+# t3.start()
+
+#Multiprocessing in python
+# import multiprocessing
+# import time
+
+# def print_numbers():
+#     for i in range(1, 6):
+#         print(f"Process: Number {i}")
+#         time.sleep(1)
+
+# if __name__ == "__main__":
+#     processes = []
+#     for _ in range(3):
+#         p = multiprocessing.Process(target=print_numbers)
+#         processes.append(p)
+#         p.start()
+
+#     for p in processes:
+#         p.join()
+
+#     print("All processes finished execution.")
+
+
+ 
